@@ -14,6 +14,8 @@ steps:
     PLUGIN_HOSTNAME: 
       from_secret: hostname
 
+    PLUGIN_SECURE: true
+    PLUGIN_VERIFY: false
     PLUGIN_EXCLUDE: ^\.git/$
   when:
     branch:
