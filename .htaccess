@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www.geraldoandrade\.com [NC]
+RewriteRule ^(.*)$ https://geraldoandrade.com/$1 [R,L]
