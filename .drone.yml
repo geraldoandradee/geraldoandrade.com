@@ -16,7 +16,7 @@ steps:
 
     PLUGIN_SECURE: true
     PLUGIN_VERIFY: false
-    PLUGIN_EXCLUDE: ^\.git/|.drone.yaml|LICENSE|README.md$
+    PLUGIN_EXCLUDE: ^\.git/|\.drone\.yaml|LICENSE|README\.md$
   when:
     branch:
     - master
