@@ -6,7 +6,7 @@ name: Deploy To Server
 steps:
   - name: upload
     image: cschlosser/drone-ftps
-    settings:
+    environment:
       dest_dir: /public
       hostname:
         from_secret: hostname    
