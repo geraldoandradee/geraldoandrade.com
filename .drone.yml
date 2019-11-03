@@ -1,6 +1,25 @@
-pipeline:
-  deploy:
+---
+kind: pipeline
+type: docker
+name: Deploy To Server
+
+steps:
+  - name: upload
     image: cschlosser/drone-ftps
-    secrets: [ ftp_username, ftp_password, hostname ]
-    secure: true
-    dest_dir: /public
+    settings:
+      dest_dir: /public
+      exclude:
+        - ^\.git/$
+        - ^\.gitignore$
+        - ^\.drone.yml$
+        - ^\LICENCE$
+        - ^\README.md$
+      hostname:
+        from_secret: hostname    
+      username:
+        from_secret: ftp_username    
+      password :
+        from_secret: ftp_password
+trigger:
+  branch:
+    - master
