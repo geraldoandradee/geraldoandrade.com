@@ -4,22 +4,19 @@ type: docker
 name: Deploy To Server
 
 steps:
-  - name: upload
-    image: cschlosser/drone-ftps
-    settings:
-      dest_dir: /public
-      exclude:
-        - ^\.git/$
-        - ^\.gitignore$
-        - ^\.drone.yml$
-        - ^\LICENCE$
-        - ^\README.md$
-      hostname:
-        from_secret: hostname    
-      username:
-        from_secret: ftp_username    
-      password :
-        from_secret: ftp_password
-trigger:
-  branch:
+- name: upload
+  image: cschlosser/drone-ftps
+  environment:
+    FTP_USERNAME:
+      from_secret: ftp_username
+    FTP_PASSWORD:
+      from_secret: ftp_password
+    PLUGIN_HOSTNAME: 
+      from_secret: hostname
+
+    PLUGIN_EXCLUDE: ^\.git/$
+  when:
+    branch:
     - master
+    event:
+    - push    
