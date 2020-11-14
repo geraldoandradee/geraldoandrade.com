@@ -1,0 +1,29 @@
+name: Publish Application
+
+on:
+  release:
+    types: [ published ]
+
+jobs:
+  deploy:
+    name: sftp-deploy-action
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 4
+      - name: Get the version
+        id: get_version
+        run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}          
+      - name: Deploy it
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}
+          port: ${{ secrets.PORT }}
+          script: |
+            cd /home/geraldolabs/apps/geraldoandradee/geraldoandrade.com
+            git fetch --all --tags
+            git pull origin master
+            git checkout tags/${{ steps.get_version.outputs.VERSION }} -b master
