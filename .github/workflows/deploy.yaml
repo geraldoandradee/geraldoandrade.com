@@ -1,30 +1,19 @@
-name: Publish Application
+name: Continuous Integration
 
 on:
-  release:
-    types: [ published ]
+  push:
+    tags:
+      - "*"  
 
 jobs:
-  deploy:
-    name: sftp-deploy-action
+  main:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: 4
-      - name: Get the version
-        id: get_version
-        run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}          
-      - name: Deploy it
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.KEY }}
-          port: ${{ secrets.PORT }}
-          script: |
-            cd /home/geraldolabs/apps/geraldoandradee/geraldoandrade.com
-            git fetch --all --tags
-            git pull origin master
-            git checkout tags/${{ steps.get_version.outputs.VERSION }} -b master
-            make build
+    - uses: actions/checkout@v1
+    - name: Build and push image to Dockerhub
+      uses: docker/build-push-action@v1.1.0
+      with:
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_TOKEN }}
+        repository: geraldoandrade/geraldoandrade.com
+        tag_with_ref: true          
