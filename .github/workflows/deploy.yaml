@@ -31,7 +31,7 @@ jobs:
         KALM_DEPLOY_KEY: ${{ secrets.KALM_DEPLOY_KEY }}
         KALM_APP: "personal-site"
         KALM_COMPONENT: "site"
-        KALM_COMPONENT_IMG_TAG: "geraldoandradee/geraldoandrade.com:${{ steps.branch_name.outputs.SOURCE_TAG }}"
+        KALM_COMPONENT_IMG_TAG: "${{ steps.branch_name.outputs.SOURCE_TAG }}"
     - name: output of step deploy
       if: success()
       run: echo 'The callback response was ${{ steps.deploy.outputs.resp }}.'
