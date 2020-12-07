@@ -1,0 +1,21 @@
+{{- $fullName := include "geraldoandrade_com.fullname" . -}}
+{{- $svcPort := .Values.service.port -}}
+apiVersion: getambassador.io/v2
+kind: Mapping
+metadata:
+  name: ga-site
+  namespace: {{ .Release.Namespace }}
+  labels:
+    app: ga-site
+spec:
+  prefix: /
+  service: '{{ $fullName }}.{{ .Release.Namespace }}:{{ $svcPort }}'
+  bypass_auth: true
+  timeout_ms: 0
+  host: geraldoandrade.com
+  add_response_headers:
+    x-frame-options: "SAMEORIGIN"
+  labels:
+    ambassador:
+      - app:
+          - ga-site
