@@ -29,7 +29,7 @@ jobs:
       with:
         KALM_API_ADDRESS: ${{ secrets.KALM_API_ADDRESS }}
         KALM_DEPLOY_KEY: ${{ secrets.KALM_DEPLOY_KEY }}
-        KALM_APP: "personal-site"
+        KALM_APP: "geraldoandrade"
         KALM_COMPONENT: "site"
         KALM_COMPONENT_IMG_TAG: "${{ steps.branch_name.outputs.SOURCE_TAG }}"
     - name: output of step deploy
