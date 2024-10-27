@@ -3,3 +3,4 @@ server.crt
 server.key
 .lego
 .idea
+.DS_Store
