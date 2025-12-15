@@ -212,66 +212,6 @@
       color: #824027;
     }
 
-    /* Parallax Styles */
-    .parallax-section {
-      position: relative;
-      min-height: 280px;
-      background-attachment: fixed;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .parallax-gradient-1 {
-      background: 
-        linear-gradient(135deg, #1a1a2e 0%, #16213e 25%, #0f3460 50%, #e94560 100%);
-      background-attachment: fixed;
-    }
-
-    .parallax-gradient-1::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: 
-        radial-gradient(circle at 20% 80%, rgba(189, 93, 56, 0.3) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(52, 58, 64, 0.4) 0%, transparent 50%),
-        repeating-linear-gradient(
-          45deg,
-          transparent,
-          transparent 35px,
-          rgba(255, 255, 255, 0.02) 35px,
-          rgba(255, 255, 255, 0.02) 70px
-        );
-      background-attachment: fixed;
-    }
-
-    .parallax-content {
-      position: relative;
-      z-index: 1;
-      text-align: center;
-      color: #fff;
-      padding: 2rem;
-    }
-
-    .parallax-content h3 {
-      color: #fff;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-      margin: 0;
-      font-size: 2.5rem;
-    }
-
-    .parallax-content p {
-      color: rgba(255, 255, 255, 0.85);
-      font-size: 1.1rem;
-      margin-top: 0.5rem;
-    }
-
     /* Experience Timeline Styles */
     .resume-item {
       border-left: 3px solid #bd5d38;
@@ -321,16 +261,8 @@
       margin-bottom: 0.3rem;
     }
 
-    /* Mobile parallax fallback */
+    /* Mobile styles */
     @media (max-width: 768px) {
-      .parallax-section {
-        background-attachment: scroll;
-      }
-
-      .parallax-gradient-1::before {
-        background-attachment: scroll;
-      }
-
       h1 {
         font-size: 3.5rem;
         line-height: 3.5rem;
@@ -400,14 +332,6 @@
         </div>
       </div>
     </section>
-
-    <!-- Parallax Divider -->
-    <div class="parallax-section parallax-gradient-1">
-      <div class="parallax-content">
-        <h3>Work Experience</h3>
-        <p>16+ years building scalable systems</p>
-      </div>
-    </div>
 
     <section class="resume-section p-3 p-lg-5" id="experience">
       <div class="w-100">
