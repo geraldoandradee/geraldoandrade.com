@@ -38,7 +38,313 @@
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
 
   <!-- Custom styles for this template -->
-  <style>body{font-family:Muli,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';padding-top:54px;color:#868e96}@media (min-width:992px){body{padding-top:0;padding-left:17rem}}h1,h2,h3,h4,h5,h6{font-family:'Saira Extra Condensed',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';font-weight:700;text-transform:uppercase;color:#343a40}h1{font-size:6rem;line-height:5.5rem}h2{font-size:3.5rem}h3{font-size:2rem}p.lead{font-size:1.15rem;font-weight:400}.subheading{text-transform:uppercase;font-weight:500;font-family:'Saira Extra Condensed',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';font-size:1.5rem}.social-icons a{display:inline-block;height:3.5rem;width:3.5rem;background-color:#495057;color:#fff!important;border-radius:100%;text-align:center;font-size:1.5rem;line-height:3.5rem;margin-right:1rem}.social-icons a:last-child{margin-right:0}.social-icons a:hover{background-color:#bd5d38}.dev-icons{font-size:3rem}.dev-icons .list-inline-item i:hover{color:#bd5d38}#sideNav .navbar-nav .nav-item .nav-link{font-weight:800;letter-spacing:.05rem;text-transform:uppercase}#sideNav .navbar-toggler:focus{outline-color:#d48a6e}@media (min-width:992px){#sideNav{text-align:center;position:fixed;top:0;left:0;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;width:17rem;height:100vh}#sideNav .navbar-brand{display:-webkit-box;display:-ms-flexbox;display:flex;margin:auto auto 0;padding:.5rem}#sideNav .navbar-brand .img-profile{max-width:10rem;max-height:10rem;border:.5rem solid rgba(255,255,255,.2)}#sideNav .navbar-collapse{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;-webkit-box-flex:0;-ms-flex-positive:0;flex-grow:0;width:100%;margin-bottom:auto}#sideNav .navbar-collapse .navbar-nav{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;width:100%}#sideNav .navbar-collapse .navbar-nav .nav-item{display:block}#sideNav .navbar-collapse .navbar-nav .nav-item .nav-link{display:block}}section.resume-section{padding-top:5rem!important;padding-bottom:5rem!important;max-width:75rem}section.resume-section .resume-item .resume-date{min-width:none}@media (min-width:768px){section.resume-section{min-height:100vh}section.resume-section .resume-item .resume-date{min-width:18rem}}@media (min-width:992px){section.resume-section{padding-top:3rem!important;padding-bottom:3rem!important}}.bg-primary{background-color:#bd5d38!important}.text-primary{color:#bd5d38!important}a{color:#bd5d38}a:active,a:focus,a:hover{color:#824027}</style>
+  <style>
+    body {
+      font-family: Muli, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+      padding-top: 54px;
+      color: #868e96;
+    }
+
+    @media (min-width: 992px) {
+      body {
+        padding-top: 0;
+        padding-left: 17rem;
+      }
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Saira Extra Condensed', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #343a40;
+    }
+
+    h1 {
+      font-size: 6rem;
+      line-height: 5.5rem;
+    }
+
+    h2 {
+      font-size: 3.5rem;
+    }
+
+    h3 {
+      font-size: 2rem;
+    }
+
+    p.lead {
+      font-size: 1.15rem;
+      font-weight: 400;
+    }
+
+    .subheading {
+      text-transform: uppercase;
+      font-weight: 500;
+      font-family: 'Saira Extra Condensed', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+      font-size: 1.5rem;
+    }
+
+    .social-icons a {
+      display: inline-block;
+      height: 3.5rem;
+      width: 3.5rem;
+      background-color: #495057;
+      color: #fff !important;
+      border-radius: 100%;
+      text-align: center;
+      font-size: 1.5rem;
+      line-height: 3.5rem;
+      margin-right: 1rem;
+    }
+
+    .social-icons a:last-child {
+      margin-right: 0;
+    }
+
+    .social-icons a:hover {
+      background-color: #bd5d38;
+    }
+
+    .dev-icons {
+      font-size: 3rem;
+    }
+
+    .dev-icons .list-inline-item i:hover {
+      color: #bd5d38;
+    }
+
+    #sideNav .navbar-nav .nav-item .nav-link {
+      font-weight: 800;
+      letter-spacing: .05rem;
+      text-transform: uppercase;
+    }
+
+    #sideNav .navbar-toggler:focus {
+      outline-color: #d48a6e;
+    }
+
+    @media (min-width: 992px) {
+      #sideNav {
+        text-align: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        width: 17rem;
+        height: 100vh;
+      }
+
+      #sideNav .navbar-brand {
+        display: flex;
+        margin: auto auto 0;
+        padding: .5rem;
+      }
+
+      #sideNav .navbar-brand .img-profile {
+        max-width: 10rem;
+        max-height: 10rem;
+        border: .5rem solid rgba(255, 255, 255, .2);
+      }
+
+      #sideNav .navbar-collapse {
+        display: flex;
+        align-items: flex-start;
+        flex-grow: 0;
+        width: 100%;
+        margin-bottom: auto;
+      }
+
+      #sideNav .navbar-collapse .navbar-nav {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      #sideNav .navbar-collapse .navbar-nav .nav-item {
+        display: block;
+      }
+
+      #sideNav .navbar-collapse .navbar-nav .nav-item .nav-link {
+        display: block;
+      }
+    }
+
+    section.resume-section {
+      padding-top: 5rem !important;
+      padding-bottom: 5rem !important;
+      max-width: 75rem;
+    }
+
+    section.resume-section .resume-item .resume-date {
+      min-width: none;
+    }
+
+    @media (min-width: 768px) {
+      section.resume-section {
+        min-height: 100vh;
+      }
+
+      section.resume-section .resume-item .resume-date {
+        min-width: 18rem;
+      }
+    }
+
+    @media (min-width: 992px) {
+      section.resume-section {
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+      }
+    }
+
+    .bg-primary {
+      background-color: #bd5d38 !important;
+    }
+
+    .text-primary {
+      color: #bd5d38 !important;
+    }
+
+    a {
+      color: #bd5d38;
+    }
+
+    a:active, a:focus, a:hover {
+      color: #824027;
+    }
+
+    /* Parallax Styles */
+    .parallax-section {
+      position: relative;
+      min-height: 280px;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .parallax-gradient-1 {
+      background: 
+        linear-gradient(135deg, #1a1a2e 0%, #16213e 25%, #0f3460 50%, #e94560 100%);
+      background-attachment: fixed;
+    }
+
+    .parallax-gradient-1::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: 
+        radial-gradient(circle at 20% 80%, rgba(189, 93, 56, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(52, 58, 64, 0.4) 0%, transparent 50%),
+        repeating-linear-gradient(
+          45deg,
+          transparent,
+          transparent 35px,
+          rgba(255, 255, 255, 0.02) 35px,
+          rgba(255, 255, 255, 0.02) 70px
+        );
+      background-attachment: fixed;
+    }
+
+    .parallax-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      color: #fff;
+      padding: 2rem;
+    }
+
+    .parallax-content h3 {
+      color: #fff;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    .parallax-content p {
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 1.1rem;
+      margin-top: 0.5rem;
+    }
+
+    /* Experience Timeline Styles */
+    .resume-item {
+      border-left: 3px solid #bd5d38;
+      padding-left: 2rem;
+      padding-bottom: 2rem;
+      position: relative;
+      margin-bottom: 1rem;
+    }
+
+    .resume-item::before {
+      content: '';
+      position: absolute;
+      left: -9px;
+      top: 0;
+      width: 15px;
+      height: 15px;
+      background-color: #bd5d38;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      box-shadow: 0 0 0 2px #bd5d38;
+    }
+
+    .resume-item:last-child {
+      padding-bottom: 0;
+    }
+
+    .resume-item .resume-date {
+      color: #bd5d38;
+      font-weight: 600;
+    }
+
+    .resume-item h3.mb-0 {
+      font-size: 1.5rem;
+    }
+
+    .resume-item .subheading {
+      font-size: 1.2rem;
+      color: #495057;
+    }
+
+    .resume-item ul {
+      margin-top: 0.5rem;
+      padding-left: 1.2rem;
+    }
+
+    .resume-item li {
+      margin-bottom: 0.3rem;
+    }
+
+    /* Mobile parallax fallback */
+    @media (max-width: 768px) {
+      .parallax-section {
+        background-attachment: scroll;
+      }
+
+      .parallax-gradient-1::before {
+        background-attachment: scroll;
+      }
+
+      h1 {
+        font-size: 3.5rem;
+        line-height: 3.5rem;
+      }
+
+      h2 {
+        font-size: 2.5rem;
+      }
+
+      .resume-item {
+        padding-left: 1.5rem;
+      }
+    }
+  </style>
 
 </head>
 
@@ -58,6 +364,9 @@
       <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/pdf/CV-English.pdf" target="_blank">Ré­su­mé</a>
@@ -94,6 +403,181 @@
         </div>
       </div>
     </section>
+
+    <!-- Parallax Divider -->
+    <div class="parallax-section parallax-gradient-1">
+      <div class="parallax-content">
+        <h3>Work Experience</h3>
+        <p>16+ years building scalable systems</p>
+      </div>
+    </div>
+
+    <section class="resume-section p-3 p-lg-5" id="experience">
+      <div class="w-100">
+        <h2 class="mb-5">Experience</h2>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-4">
+          <div class="resume-content">
+            <h3 class="mb-0">Senior Software Engineer / Cloud Architect</h3>
+            <div class="subheading mb-3">banbutsu · Berlin, Germany</div>
+            <p>Back-end software engineer focused on Go, Kubernetes, Postgres, GCP, and Azure.</p>
+            <ul>
+              <li>Standardising the flows of CI/CD processes with automations using Gitlab pipelines with containers, deployments using Helm, support the QA team to integrate the pipeline with end-to-end tests</li>
+              <li>Architect and implementation of banbutsu's platform using micro-services architecture</li>
+              <li>Code as infrastructure implementation using Terraform and Ansible</li>
+              <li>Improvement, maintenance, and extension of existing services in Java</li>
+              <li>API design, documentation, monitoring, and implementation</li>
+              <li>Mentoring other engineers</li>
+              <li>Infrastructure migration from Azure to GCP</li>
+            </ul>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">January 2021 - July 2023</span>
+          </div>
+        </div>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-4">
+          <div class="resume-content">
+            <h3 class="mb-0">Principal Software Engineer</h3>
+            <div class="subheading mb-3">Humanitec · Berlin, Germany</div>
+            <p>Back-end software engineer focused on Python 3, Django, Go, Kubernetes, Postgres, and Google Cloud Platform.</p>
+            <ul>
+              <li>Improvement of CI/CD processes with automatic deployments using Helm, support the QA team to integrate the pipeline with end-to-end tests</li>
+              <li>Move from a Python monolith to a Python/Go micro-services architecture</li>
+              <li>Improvement of REST API design, documentation and implementation</li>
+              <li>Mentoring junior engineers</li>
+              <li>Webinars using Humanitec Platform API integrating with Kubernetes in AWS, GCP, and Azure cloud providers</li>
+            </ul>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">December 2018 - December 2020</span>
+          </div>
+        </div>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-4">
+          <div class="resume-content">
+            <h3 class="mb-0">Team Leader</h3>
+            <div class="subheading mb-3">Catho · São Paulo, Brasil</div>
+            <p>Team leader specialized on web development, team productivity and system performance.</p>
+            <ul>
+              <li>People development, technical training, and peers evaluation</li>
+              <li>Re-architecture from on premise to cloud infrastructure using AWS</li>
+              <li>Web development and tech mentor for Python (Flask, Django e Bottle), Javascript (Backend e Frontend), Java (Spring), Team Work, Scrum, and AWS</li>
+            </ul>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">March 2018 - December 2018</span>
+          </div>
+        </div>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-4">
+          <div class="resume-content">
+            <h3 class="mb-0">Senior Software Engineer Specialist</h3>
+            <div class="subheading mb-3">Catho · São Paulo, Brasil</div>
+            <p>Web development specialist focused on:</p>
+            <ul>
+              <li>SalesForce integration with existing systems</li>
+              <li>Legacy system modernization (PHP 4 and other languages)</li>
+              <li>Documentation improvement and standardization</li>
+              <li>CI/CD processes</li>
+            </ul>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">July 2017 - February 2018</span>
+          </div>
+        </div>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-4">
+          <div class="resume-content">
+            <h3 class="mb-0">Senior Software Engineer</h3>
+            <div class="subheading mb-3">Predicta · São Paulo, Brasil</div>
+            <p>Responsible for building, modeling, designing and maintenance of high availability and scalable systems. Not only focused on T.I. and programming but also product development. Experienced in Data Management Platform, AD Serving, Tag Manager, documentation and third-party APIs. Excellent python developer, great Java Programmer, fluent in PHP and JavaScript. Also, acting as DevOps when needed.</p>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">March 2013 - June 2017</span>
+          </div>
+        </div>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-4">
+          <div class="resume-content">
+            <h3 class="mb-0">Lead Developer</h3>
+            <div class="subheading mb-3">Agência Blue · Alagoas, Brasil</div>
+            <p>Full stack developer focused on management, productivity and standardization of all agile projects in Blue Agency. It was responsible for creation of Blue Framework built in PHP 5. The Blue Admin, the Agência Blue's content manager, was based on Blue Framework. All Blue Agency's customers use and liked this CMS.</p>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">July 2012 - March 2013</span>
+          </div>
+        </div>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-4">
+          <div class="resume-content">
+            <h3 class="mb-0">Back-end Engineer</h3>
+            <div class="subheading mb-3">Rino · Alagoas, Brasil</div>
+            <p>Python developer specialized in Django framework (Apache, Python and WSGI), HTML, CSS and Javascript. Worked as frontend and backend developer.</p>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">May 2012 - June 2013</span>
+          </div>
+        </div>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-4">
+          <div class="resume-content">
+            <h3 class="mb-0">Back-end Engineer</h3>
+            <div class="subheading mb-3">Plus! Agência Digital · Alagoas, Brasil</div>
+            <p>PHP 5 developer, Javascript developer, ActionScript 3.0 developer with knowledge on MySQL, configuration and maintenance of Linux/Unix systems. Also have worked with open-source technologies like CSS and HTML.</p>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">June 2011 - April 2012</span>
+          </div>
+        </div>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-4">
+          <div class="resume-content">
+            <h3 class="mb-0">Working Student Data Warehouse Developer</h3>
+            <div class="subheading mb-3">UFAL · Alagoas, Brasil</div>
+            <p>Migrated the old Data Warehouse (Pentaho) to a new one, SpagoBI. As part of migration process recreated some cubes and created new ones for OLAP analysis using JPalo client. Obtained experience with Java, Tomcat servers and Oracle 10g databases intensively.</p>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">January 2010 - May 2011</span>
+          </div>
+        </div>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-4">
+          <div class="resume-content">
+            <h3 class="mb-0">Intern PHP 5 Back-end Developer</h3>
+            <div class="subheading mb-3">CEPAL · Alagoas, Brasil</div>
+            <p>Developed DeRepente's project portal using Joomla! 1.5 CMS.</p>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">January 2010 - May 2011</span>
+          </div>
+        </div>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-4">
+          <div class="resume-content">
+            <h3 class="mb-0">Entrepreneur Web Developer</h3>
+            <div class="subheading mb-3">Brasil Terra Sat · Alagoas, Brasil</div>
+            <p>At my own company I've programmed in PHP a System For Landowners to manage their lands.</p>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">May 2008 - December 2009</span>
+          </div>
+        </div>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between">
+          <div class="resume-content">
+            <h3 class="mb-0">Working Student Python Developer</h3>
+            <div class="subheading mb-3">UFAL · Alagoas, Brasil</div>
+            <p>Worked with Plone 2.5 and 3. Developed components and widgets using ZPT (Zope Page Templates) and internal systems using Django.</p>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">January 2008 - April 2009</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha512-bnIvzh6FU75ZKxp0GXLH9bewza/OIw6dLVh9ICg0gogclmYGguQJWl8U30WpbsGTqbIiAwxTsbe76DErLq5EDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
