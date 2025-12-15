@@ -1,0 +1,260 @@
+/* CV PDF Layout Styles */
+@page {
+  size: A4;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  background: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, Arial, sans-serif;
+  font-size: 10pt;
+  line-height: 1.4;
+  color: #333;
+}
+
+.cv-page {
+  width: 210mm;
+  min-height: 297mm;
+  margin: 0 auto;
+  background: #fff;
+}
+
+/* Blue header bar */
+.cv-header {
+  height: 8mm;
+  background: linear-gradient(to right, #2b7dbd, #1a5a8a);
+  width: 100%;
+}
+
+.cv-content {
+  display: grid;
+  grid-template-columns: 58mm 1fr;
+  min-height: calc(297mm - 8mm);
+}
+
+/* Sidebar styles */
+.cv-sidebar {
+  background: #f8f9fa;
+  padding: 6mm 5mm;
+  border-right: 1px solid #e0e0e0;
+}
+
+.cv-photo {
+  width: 48mm;
+  height: 48mm;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 5mm;
+  border-radius: 50%;
+}
+
+.cv-section-title {
+  color: #2b7dbd;
+  text-transform: uppercase;
+  font-size: 10pt;
+  font-weight: 700;
+  margin: 5mm 0 2mm 0;
+  padding-bottom: 1mm;
+  border-bottom: 1px solid #2b7dbd;
+}
+
+.cv-sidebar .cv-section-title {
+  font-size: 9pt;
+}
+
+.cv-contact {
+  font-size: 8.5pt;
+  line-height: 1.5;
+  color: #444;
+}
+
+.cv-contact div {
+  margin-bottom: 1mm;
+  word-break: break-word;
+}
+
+.cv-languages {
+  font-size: 8.5pt;
+  line-height: 1.5;
+}
+
+.cv-languages div {
+  margin-bottom: 1mm;
+}
+
+.cv-skills {
+  font-size: 8pt;
+  line-height: 1.4;
+}
+
+.cv-skills ul {
+  list-style: disc;
+  padding-left: 4mm;
+  margin: 0;
+}
+
+.cv-skills li {
+  margin-bottom: 1mm;
+}
+
+.cv-education {
+  font-size: 8.5pt;
+  line-height: 1.4;
+}
+
+.edu-degree {
+  font-weight: 600;
+  color: #333;
+}
+
+.edu-school {
+  color: #555;
+  font-size: 8pt;
+}
+
+.edu-location {
+  color: #666;
+  font-size: 7.5pt;
+}
+
+.edu-date {
+  color: #2b7dbd;
+  font-size: 8pt;
+  margin-top: 1mm;
+}
+
+.cv-awards {
+  font-size: 8pt;
+  line-height: 1.4;
+}
+
+.award-item {
+  color: #444;
+}
+
+/* Main content styles */
+.cv-main {
+  padding: 6mm 8mm;
+}
+
+.cv-name {
+  color: #2b7dbd;
+  font-size: 22pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0 0 2mm 0;
+  line-height: 1.1;
+}
+
+.cv-main .cv-section-title {
+  margin-top: 4mm;
+  margin-bottom: 2mm;
+}
+
+.cv-profile {
+  font-size: 9.5pt;
+  line-height: 1.5;
+  color: #444;
+  text-align: justify;
+  margin-bottom: 3mm;
+}
+
+/* Job entries */
+.cv-job {
+  margin-bottom: 4mm;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.job-title {
+  font-weight: 700;
+  color: #2b7dbd;
+  font-size: 9.5pt;
+  margin-bottom: 0.5mm;
+}
+
+.job-company {
+  font-weight: 600;
+  color: #555;
+  font-size: 9pt;
+  margin-bottom: 1mm;
+}
+
+.cv-job p {
+  font-size: 9pt;
+  color: #444;
+  margin-bottom: 1mm;
+  line-height: 1.4;
+}
+
+.cv-job ul {
+  list-style: disc;
+  padding-left: 5mm;
+  margin: 1mm 0;
+}
+
+.cv-job li {
+  font-size: 8.5pt;
+  color: #444;
+  margin-bottom: 0.5mm;
+  line-height: 1.35;
+}
+
+/* References */
+.cv-references {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2mm 4mm;
+  font-size: 8.5pt;
+}
+
+.ref-item {
+  color: #444;
+}
+
+.ref-item strong {
+  color: #2b7dbd;
+}
+
+/* Print-specific styles */
+@media print {
+  html, body {
+    width: 210mm;
+    height: 297mm;
+  }
+
+  .cv-page {
+    width: 100%;
+    height: auto;
+    page-break-after: always;
+  }
+
+  .cv-job {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+/* Screen view helper - shows page boundaries */
+@media screen {
+  body {
+    background: #e0e0e0;
+    padding: 10mm;
+  }
+
+  .cv-page {
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  }
+}
